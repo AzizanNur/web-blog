@@ -51,7 +51,7 @@ class DashboardPostController extends Controller
             'body' => 'required',
             'image' => 'image|file|max:1024'
         ]);    
-        dd($request);
+        // dd($request);
         $validatedData['user_id'] = auth()->user()->id;
         $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 20);
         
